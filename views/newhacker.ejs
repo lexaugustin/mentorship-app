@@ -1,0 +1,34 @@
+<% include partials/header %>
+
+<div class="container">
+    
+    <div class="row">
+        <h2 style="text-align: center;">SIGN UP HERE!</h2>
+        
+        <div style="width: 30%; margin: 50px auto">
+            <form action="/waitinglist" method="POST">
+                <div class="form-group">
+                    <input class="form-control" type="text" name="name" placeholder="name">
+                </div>
+                <div class="form-group">
+                    <input class="form-control"  type="text" name="portrait" placeholder="picture url">                 
+                </div>
+                <div class="form-group">
+                    <input class="form-control"  type="text" name="skill" placeholder="Please enter your skill">                 
+                </div>
+                <div class="form-group">
+                    <input class="form-control"  type="text" name="experience" placeholder="Rate your experience 1-5">                 
+                </div>
+                <div class="form-group">
+                    <input class="form-control"  type="text" name="focus" placeholder="What will you focus on during this hackathon?">                 
+                </div>
+                <div class="form-group" style="width: 50%; margin: 50px auto">
+                    <button class="btn btn-lg btn-primary btn-block">SIGN UP</button>                 
+                </div>
+                <a style="text-align: center"href="/waitinglist"><h4>< Go Back</h4></a>
+            </form>
+        </div>
+    </div>
+</div>
+
+<% include partials/footer %>

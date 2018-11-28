@@ -1,0 +1,31 @@
+<% include partials/header %>
+
+<div class="container">
+    <header class="jumbotron">
+        <div class="container">
+            <h2>Waiting List</h2>
+            <p>This is a list of the people looking for a team</p>
+            <p>
+                <a class="btn btn-primary btn-large" href="/waitinglist/new">Join The List</a>
+                <a class="btn btn-primary btn-large" href="/findteam">Get Match</a>
+            </p>
+        </div>
+    </header>
+    
+        <div class="row text-center" style="display: flex; flex-wrap: wrap;">
+            <% hackers.forEach(function(person){ %>
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="thumbnail">
+                        <<img src="<%=person.portrait%>" style="height: 200px">
+                        <div>
+                            <h4><%= person.name %></h4> 
+                        </div>
+                        <p><%= person.skill %> - <%= person.experience %></p>
+                        <p><%= person.focus %></p>
+                    </div>
+                </div>
+            <% })%>
+        </div>
+</div>
+
+<% include partials/footer %>
